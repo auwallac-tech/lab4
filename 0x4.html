@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Empty Template</title>
+
+   <link rel="stylesheet" href="0x4.css">
+
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+   <h1>Hello, world!</h1>
+   
+   <button id="needy-button">Click Me</button>
+
+   <!-- Output area for megaSentence -->
+   <div id="output"></div>
+
+   <script>
+   /* -------------------------------
+      YOUR MEGASENTENCE CODE
+   --------------------------------*/
+
+   let myCommutes = ["Car", "bus", "rental bike"];
+
+   let myFavouriteCommute = {
+       type: "Car",
+       route: 1,
+       print: "Stickers",
+       hasMiddleDoor: true,
+       drivers: ["Me"]
+   };
+
+   let megaSentence;
+
+   megaSentence = "<p>My two top commutes from the array are: " 
+       + myCommutes[0] + ", " + myCommutes[2] + "</p>";
+
+   megaSentence = megaSentence + "<p>My favourite commute possesses such characteristics: type - " 
+       + myFavouriteCommute.type + ", route number " 
+       + myFavouriteCommute.route + ", the best driver: " 
+       + myFavouriteCommute.drivers[0] + "</p>";
+
+   $(document).ready(function () {
+       $("#output").html(megaSentence);
+   });
+
+
+   /* -------------------------------
+      BUTTON COLOR-CHANGER CODE
+   --------------------------------*/
+
+   let count = 0;
+   let colors = ["Orchid", "Coral", "HotPink", "Plum"];
+
+   $("#needy-button").click(function () {
+     let color = colors[count % colors.length]; 
+     $(this).html("You clicked me " + (count + 1) + " times — " + color);
+     $(this).css("background-color", color);
+     count++;
+   });
+   </script>
+
+</body>
+</html>
