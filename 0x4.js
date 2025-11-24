@@ -11,7 +11,7 @@ let myFavouriteCommute = {
 let megaSentence;
 
 megaSentence = "<p>My two top commutes from the array are: " 
-    + myCommutes[0] + ", " + myCommutes[5] + "</p>";
+    + myCommutes[0] + ", " + myCommutes[2] + "</p>";
 
 megaSentence = megaSentence + "<p>My favourite commute possesses such characteristics: type - " 
     + myFavouriteCommute.type + ", route number " 
@@ -21,3 +21,4 @@ megaSentence = megaSentence + "<p>My favourite commute possesses such characteri
 $(document).ready(function () {
     $("#output").html(megaSentence);
 });
+
